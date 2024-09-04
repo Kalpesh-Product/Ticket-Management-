@@ -126,7 +126,7 @@ const AdminTickets = () => {
     const name = target.name;
     const value = target.value;
 
-    setTickets({
+    setAssignMemberForm({
       ...assignMemberForm,
       [name]: value,
     });

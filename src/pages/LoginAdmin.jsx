@@ -57,7 +57,7 @@ const LoginAdmin = () => {
     });
 
     // Navigate to homepage
-    navigate("/admin");
+    navigate("/admin-tickets");
   };
 
   // Function to handle login form submission

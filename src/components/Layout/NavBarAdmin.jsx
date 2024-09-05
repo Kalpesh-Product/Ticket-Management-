@@ -49,9 +49,24 @@ export function NavBarAdmin() {
         <Navbar.Link as={Link} to="/admin">
           Admin
         </Navbar.Link> */}
+        {/* <Navbar.Link as={Link} to="/admin">
+          Dashboard
+        </Navbar.Link> */}
 
-        <Navbar.Link as={Link} to="/admin">
-          Back
+        <Navbar.Link as={Link} to="/admin-tickets">
+          Today's Tickets
+        </Navbar.Link>
+
+        <Navbar.Link as={Link} to="/admin-closed-tickets">
+          Closed Tickets
+        </Navbar.Link>
+
+        <Navbar.Link as={Link} to="/admin-members">
+          View Members
+        </Navbar.Link>
+
+        <Navbar.Link as={Link} to="/admin-report">
+          View Report
         </Navbar.Link>
       </Navbar.Collapse>
     </Navbar>

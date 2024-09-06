@@ -7,9 +7,8 @@ import axios from "axios";
 import LayoutAdmin from "../components/Layout/LayoutAdmin";
 import { Button, Modal } from "flowbite-react";
 
-const AdminClosedTickets = () => {
+const AdminUnresolvedTickets = () => {
   const [tickets, setTickets] = useState(null);
-
   const [openDetailsModal, setOpenDetailsModal] = useState(false);
 
   // form to update assignedMember in ticket DB
@@ -80,7 +79,7 @@ const AdminClosedTickets = () => {
   // Function to get all tickets
   const fetchTickets = async () => {
     try {
-      const responseFromBackend = await axios.get("/get-closed-tickets");
+      const responseFromBackend = await axios.get("/get-unresolved-tickets");
 
       setTickets(responseFromBackend.data.tickets);
     } catch (error) {
@@ -228,6 +227,11 @@ const AdminClosedTickets = () => {
                   htmlFor="department"
                   className="block mb-2 text-sm font-medium text-gray-900 dark:text-white">
                   Time : {ticketDetails.time}
+                </label>
+                <label
+                  htmlFor="department"
+                  className="block mb-2 text-sm font-medium text-gray-900 dark:text-white">
+                  Member's Message : {ticketDetails.memberMessageToAdmin}
                 </label>
 
                 {/* <select
@@ -401,4 +405,4 @@ const AdminClosedTickets = () => {
   );
 };
 
-export default AdminClosedTickets;
+export default AdminUnresolvedTickets;

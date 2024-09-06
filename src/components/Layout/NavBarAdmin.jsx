@@ -61,6 +61,10 @@ export function NavBarAdmin() {
           Closed Tickets
         </Navbar.Link>
 
+        <Navbar.Link as={Link} to="/admin-unresolved-tickets">
+          Unresolved Tickets
+        </Navbar.Link>
+
         <Navbar.Link as={Link} to="/admin-members">
           View Members
         </Navbar.Link>

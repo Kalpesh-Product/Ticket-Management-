@@ -28,6 +28,7 @@ import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import UserTickets from "./pages/UserTickets";
 import MemberAcceptedTickets from "./pages/MemberAcceptedTickets";
+import AdminUnresolvedTickets from "./pages/AdminUnresolvedTickets";
 
 function App() {
   // code for initial dark theme
@@ -61,6 +62,10 @@ function App() {
             <Route
               path="/admin-closed-tickets"
               element={<AdminClosedTickets />}
+            />
+            <Route
+              path="/admin-unresolved-tickets"
+              element={<AdminUnresolvedTickets />}
             />
             <Route path="/admin-members" element={<AdminMembers />} />
             <Route path="/admin-messages" element={<AdminMessages />} />

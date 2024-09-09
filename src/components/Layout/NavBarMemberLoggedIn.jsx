@@ -1,4 +1,4 @@
-import { Avatar, Dropdown, Navbar } from "flowbite-react";
+import { Avatar, Button, Dropdown, Navbar } from "flowbite-react";
 import { Link, useParams } from "react-router-dom";
 import { DarkThemeToggle } from "flowbite-react";
 import logo from "../../images/WONO LOGO white TP.png";
@@ -28,10 +28,11 @@ export function NavBarMemberLoggedIn() {
                 {params.email}
               </span>
             </Dropdown.Header>
-            {/* <Dropdown.Item as={Link} to="/update-profile">
-            Update Profile
-          </Dropdown.Item>
-          <Dropdown.Item as={Link} to="/change-password">
+            <Dropdown.Item>Status: Available</Dropdown.Item>
+            <Dropdown.Item>
+              <Button size="xs">Mark as Unavailable</Button>
+            </Dropdown.Item>
+            {/* <Dropdown.Item as={Link} to="/change-password">
             Change Password
           </Dropdown.Item> */}
             <Dropdown.Divider />

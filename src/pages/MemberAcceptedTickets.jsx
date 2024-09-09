@@ -590,26 +590,34 @@ const MemberAcceptedTickets = () => {
                         scope="row"
                         className="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
                         {/* <button>Change to Closed</button> */}
-                        <Button
-                          onClick={() => closeTicket(ticket._id)}
-                          size="xs"
-                          color="success">
-                          Mark as Closed
-                        </Button>
+                        {ticket.status === "Closed" ? (
+                          " "
+                        ) : (
+                          <Button
+                            onClick={() => closeTicket(ticket._id)}
+                            size="xs"
+                            color="success">
+                            Mark as Closed
+                          </Button>
+                        )}
                       </th>
                       <th
                         scope="row"
                         className="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
-                        <Button
-                          // onClick={() => cannotResolve(ticket._id)}
-                          onClick={() => {
-                            setOpenModal(true);
-                            toggleCannotResolveForm(ticket);
-                          }}
-                          size="xs"
-                          color="failure">
-                          Cannot Resolve
-                        </Button>
+                        {ticket.status === "Closed" ? (
+                          " "
+                        ) : (
+                          <Button
+                            // onClick={() => cannotResolve(ticket._id)}
+                            onClick={() => {
+                              setOpenModal(true);
+                              toggleCannotResolveForm(ticket);
+                            }}
+                            size="xs"
+                            color="failure">
+                            Cannot Resolve
+                          </Button>
+                        )}
                       </th>
                     </tr>
                   );

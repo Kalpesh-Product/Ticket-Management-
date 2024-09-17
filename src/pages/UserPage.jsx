@@ -401,7 +401,12 @@ const UserPage = () => {
                               </option>
                             );
                           })}
-                        <option value="Other">Other</option>
+                        {/* <option value="Other">Other</option> */}
+
+                        {/* Conditionally render "Other" if there are messages */}
+                        {messages && messages.length > 0 && (
+                          <option value="Other">Other</option>
+                        )}
                         {/* <option value="IT">IT</option>
                         <option value="Admin">Admin</option>
                         <option value="HR">HR</option>
